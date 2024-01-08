@@ -21,16 +21,16 @@ public class BlankSpace {
 		int count = 0;
 		if (arr.length == 1 && arr[0] == 0) {
 			System.out.println(1);
-			return;
-		}
-		for (int i : arr) {
-			if (i == 0) {
-				count++;
-			} else {
-				maxx = Math.max(maxx, count);
-				count = 0;
+		} else {
+			for (int i : arr) {
+				if (i == 0) {
+					count++;
+				} else {
+					maxx = Math.max(maxx, count);
+					count = 0;
+				}
 			}
+			System.out.println(Math.max(count, maxx));
 		}
-		System.out.println(maxx);
 	}
 }
